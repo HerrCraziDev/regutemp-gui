@@ -1,6 +1,10 @@
 const fs = require('fs');
 const $ = require('jquery');
 
+//To be changed /!\
+const simulatorPath = "/home/herrcrazi/Documents/regutherm/src/";
+
+
 var ledPowerBlink; // Timeout for led blinking in indeterminate state
 var ledSyncFlash; // Timeout for sync led flashes
 
@@ -33,9 +37,9 @@ function updateIndicators(data = ['&nbsp;', '&nbsp;', '']) {
 }
 
 
-fs.watch('/home/herrcrazi/Documents/regutherm/src/data.txt', (e, filename) => {
+fs.watch(simulatorPath + "data.txt", (e, filename) => {
    
-    let data = fs.readFileSync("/home/herrcrazi/Documents/regutherm/src/data.txt", { encoding: "utf-8" }).split('\n');
+    let data = fs.readFileSync(simulatorPath + "data.txt", { encoding: "utf-8" }).split('\n');
     console.log(data);
 
     updateIndicators(data)
