@@ -1,2 +1,7 @@
 node_modules
 package-lock.json
+regutemp-gui-linux-x64
+regutemp-gui-win32-x64
+*.zip
+*.tgz
+*.tar

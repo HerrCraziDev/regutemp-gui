@@ -4,12 +4,15 @@
   "description": "GUI du projet C de CIR3",
   "main": "main.js",
   "scripts": {
-    "test": "electron ."
+    "test": "electron .",
+    "pack": "electron-packager ."
   },
   "author": "HerrCrazi",
   "license": "GPL-3.0",
   "devDependencies": {
-    "electron": "^4.0.8"
+    "canvasjs": "^1.8.1",
+    "electron": "^4.0.8",
+    "electron-packager": "^13.1.1"
   },
   "dependencies": {
     "jquery": "^3.3.1"

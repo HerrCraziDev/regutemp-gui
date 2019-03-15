@@ -2,15 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Regutemp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Regutemp</title>
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+    <script src="../node_modules/canvasjs/dist/canvasjs.js"></script>
     <script src="gui.js"></script>
 </head>
 <body>
     <div id="metrics">
         <section class="indicator" id="t_ext">
-            <h3 class="label">T<sub>INT</sub></h3>
+            <h3 class="label">T<sub>EXT</sub></h3>
             <div class="value-container">
                 <span class="value">&nbsp;</span>
                 <span class="unit">°C</span>
@@ -19,7 +23,7 @@
         </section>
     
         <section class="indicator" id="t_int">
-            <h3 class="label">T<sub>EXT</sub></h3>
+            <h3 class="label">T<sub>INT</sub></h3>
             <div class="value-container">
                 <span class="value">&nbsp;</span>
                 <span class="unit">°C</span>
@@ -37,7 +41,15 @@
         </section>
     
         <div class="spacer"></div>
-    
+        
+        <section class="indicator" id="target">
+            <h3 class="label">Target</h3>
+            <form action="#">
+                <input type="number" step="0.1" min="0" max="40" name="target" id="target-input">
+                <input type="submit" value="SET" id="target-set">
+            </form>
+        </section>
+
         <section class="indicator" id="leds">
             <div class="led-container" id="power-led">
                 <h3 class="label">PWR</h3>
